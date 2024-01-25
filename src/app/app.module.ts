@@ -8,22 +8,25 @@ import { FooterComponent } from './footer/footer.component';
 import { RouterModule } from '@angular/router';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { CompanyPageComponent } from './company-page/company-page.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    CompanyPageComponent
+    CompanyPageComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot([
-      {path: '', redirectTo: '/company', pathMatch: 'full'},
+      {path: 'home', component: HomeComponent },
+      {path: 'company', component: CompanyPageComponent},
       {path: '**', component: PageNotFoundComponent},
-      {path: 'home', component: PageNotFoundComponent },
-      {path: 'company', component: CompanyPageComponent}
+      {path: '', redirectTo: '/home', pathMatch: 'full'},
+
     ])
   ],
   providers: [
