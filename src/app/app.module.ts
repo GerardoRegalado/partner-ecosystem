@@ -11,6 +11,7 @@ import { CompanyPageComponent } from './company-page/company-page.component';
 import { HomeComponent } from './home/home.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
