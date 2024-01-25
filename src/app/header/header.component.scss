@@ -121,6 +121,7 @@ nav {
     .form-control {
       &::placeholder {
         color: $primary-gray;
+        font-family: 'Noto Sans', sans-serif;
       }
     }
     .form-select {
