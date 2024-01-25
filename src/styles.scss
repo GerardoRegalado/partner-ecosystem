@@ -1,27 +1,6 @@
 /* Imports */
   @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
-
-  /* Global Variables */
-
-  $primary-blue: #1D6BB3;
-  $primary-red: #eb1e24;
-  $primary-yellow: #fcd600;
-  $primary-green: #42b449;
-  $primary-gray: #96989b;
-
-  $secondary-blue-108-8: #083a69;
-  $secondary-blue-110-12: #6996c1;
-  $secondary-blue-106-6: #4685d1;
-  $seconday-red: #ff4856;
-  $secondary-yellow: #fca80d;
-  $secondary-green: #288928;
-
-  $tertiary-gray-104-7:#adadad;
-  $tertiary-gray-48-8:#c9c8c9;
-  $tertiary-gray-7-8:#f1f1f1;
-  $tertiary-black: #000000;
-  $tertiary-white: #ffffff;
-
+  @import './variables.scss';
   html, body {
     font-family: 'Noto Sans', sans-serif;
 }
