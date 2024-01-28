@@ -9,30 +9,19 @@ import { RouterModule } from '@angular/router';
 import { CompanyPageComponent } from './company-page/company-page.component';
 import { HomeComponent } from './home/home.component';
 
-
-
 @NgModule({
-  declarations: [
-    AppComponent,
-    HeaderComponent,
-    FooterComponent,
-    CompanyPageComponent,
-    HomeComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    RouterModule.forRoot([
-      {path: '', component: CompanyPageComponent},
-      {path: 'company', component: CompanyPageComponent},
+    declarations: [AppComponent, HeaderComponent, FooterComponent, CompanyPageComponent, HomeComponent],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        RouterModule.forRoot([
+            { path: '', component: CompanyPageComponent },
+            { path: 'company', component: CompanyPageComponent },
 
-      //{path: '', redirectTo: '/company', pathMatch: 'full'},
-
-    ])
-  ],
-  providers: [
-    provideClientHydration()
-  ],
-  bootstrap: [AppComponent]
+            //{path: '', redirectTo: '/company', pathMatch: 'full'},
+        ]),
+    ],
+    providers: [provideClientHydration()],
+    bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
