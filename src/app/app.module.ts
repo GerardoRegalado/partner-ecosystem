@@ -23,8 +23,10 @@ import { HomeComponent } from './home/home.component';
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot([
+      {path: '', component: CompanyPageComponent},
       {path: 'company', component: CompanyPageComponent},
-      {path: '', redirectTo: '/company', pathMatch: 'full'},
+
+      //{path: '', redirectTo: '/company', pathMatch: 'full'},
 
     ])
   ],
