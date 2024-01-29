@@ -4,7 +4,8 @@
 /* Home styles */
 .home {
     /* Home image position */
-
+  position: relative;
+  min-height: 100vh;
     .home-image {
         position: relative;
         width: 100%;
@@ -13,12 +14,12 @@
 
         img {
             width: 100%;
-            height: auto;
+            min-height: 100%;
             display: block;
         }
 
         /* blue overlay */
-
+      }
         .overlay {
             position: absolute;
             top: 0;
@@ -71,5 +72,40 @@
                 width: 5rem;
             }
         }
-    }
+
+
+    @media (max-width: 767px) {
+      .home {
+        .home-image {
+          img {
+            object-fit: contain;
+          }
+        }
+
+        .overlay {
+          z-index: 1;
+        }
+
+      }
+
+      .breadcrumb {
+        font-size: 0.8rem;
+        margin-left: 5vw;
+      }
+
+      .title-container {
+        display: flex;
+        align-items:flex-start;
+        flex-direction: column;
+
+        .home-title {
+          font-size: 3rem;
+        }
+
+        .chat-icon {
+          width: 10vw;
+          margin-top: 15vw;
+        }
+      }
+  }
 }
