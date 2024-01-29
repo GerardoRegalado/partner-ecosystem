@@ -127,14 +127,36 @@ footer {
         }
     }
 
+    /* Media queries */
+
     @media (max-width: 768px) {
         .container {
             flex-direction: column;
         }
 
         .col {
-            width: 100%;
+            width: 90%;
             margin-bottom: 1rem;
+        }
+
+        .subscription {
+          margin: 0 5vw;
+          .form {
+            gap: 0.1rem;
+
+            input{
+              margin-right: 0.1rem;
+              padding: 0.3rem 0.7rem;
+
+            }
+
+            button {
+              padding: 0.5rem 1rem;
+
+            }
+          }
         }
     }
 }
+
+
