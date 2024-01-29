@@ -8,6 +8,7 @@ import { FooterComponent } from './footer/footer.component';
 import { RouterModule } from '@angular/router';
 import { CompanyPageComponent } from './company-page/company-page.component';
 import { HomeComponent } from './home/home.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
     declarations: [AppComponent, HeaderComponent, FooterComponent, CompanyPageComponent, HomeComponent],
@@ -17,6 +18,7 @@ import { HomeComponent } from './home/home.component';
         RouterModule.forRoot([
             { path: '', component: CompanyPageComponent },
             { path: 'company', component: CompanyPageComponent },
+            {path: '**', component: PageNotFoundComponent}
 
             //{path: '', redirectTo: '/company', pathMatch: 'full'},
         ]),

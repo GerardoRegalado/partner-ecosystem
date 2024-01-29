@@ -1,3 +1,4 @@
+<!-- Partners introduction -->
 <section>
     <div class="company">
         <h2>
@@ -10,66 +11,72 @@
         </p>
     </div>
 </section>
+<!-- tabs -->
 <section class="tabs">
     <div class="row">
         <div class="col">
-            <button id="goal_1" class="goal-selection__button" [ngClass]="{ selected: selectedIndex === 0 }" (click)="showGoal(0)">Goal #1</button>
+            <button id="category_1" class="category-selection__button" [ngClass]="{ selected: selectedCategory === 'metrology' }" (click)="showPartnerImages('metrology')">Metrology</button>
         </div>
         <div class="col" offset="0.1">
-            <button id="goal_2" class="goal-selection__button" [ngClass]="{ selected: selectedIndex === 1 }" (click)="showGoal(1)">Goal #2</button>
+            <button id="category_2" class="category-selection__button" [ngClass]="{ selected: selectedCategory === 'machine_vision' }" (click)="showPartnerImages('machine_vision')">Machine Vision</button>
         </div>
         <div class="col" offset="0.1">
-            <button id="goal_3" class="goal-selection__button" [ngClass]="{ selected: selectedIndex === 2 }" (click)="showGoal(2)">Goal #3</button>
+            <button id="category_3" class="category-selection__button" [ngClass]="{ selected: selectedCategory === 'robotics' }" (click)="showPartnerImages('robotics')">Robotics</button>
         </div>
+        <div class="col" offset="0.1">
+          <button id="category_3" class="category-selection__button" [ngClass]="{ selected: selectedCategory === 'augmented_reality' }" (click)="showPartnerImages('augmented_reality')">Augmented Reality</button>
+      </div>
     </div>
 </section>
-
-<!-- <ion-content>
-  <div class="goals-container">
-      <div *ngFor="let goal of [goals[selectedIndex]]; let isLast = last;">
-          <ion-item class="goal-item" lines="none">
-              <ion-img class="goal-image" slot="start" src="assets/feature-headquarters/SUW_goals_icon.svg"></ion-img>
-              <div class="item-text-container">
-                  <ion-label>
-                      <h3 class="item-name">{{ goal?.name }}</h3>
-                  </ion-label>
-                  <p class="item-description">{{ goal?.description }}</p>
-              </div>
-          </ion-item>
-          <div *ngFor="let learningObj of selectedGoal?.learning_objectives">
-                  <h3 class="learning-objective-title">Learning Objective</h3>
-              <ion-item class="learning-objective-item" lines="none">
-                  <div class="item-text-container">
-                      <ion-label>
-                          <h3 class="item-name">{{ learningObj.name }}</h3>
-                      </ion-label>
-                      <p class="item-description">{{ learningObj.description }}</p>
-                  </div>
-              </ion-item>
-              <div class="success-container-wrapper">
-                  <h6 class="success-condition-title">Success Conditions</h6>
-                  <div class="success-condition-container" *ngFor="let condition of learningObj.condition">
-                      <div class="success-condition-criteria">
-                          <ion-img class="condition-image" [src]="condition.image_url"></ion-img>
-                          <div class="success-condition-label-container">
-                              <p class="success-condition-criteria__text" *ngIf="condition.comparison_property === numericConditionEnum.REVENUE || condition.comparison_property === numericConditionEnum.CASH" class="success-condition-label">{{ condition.comparison_property }} {{ condition.comparison_type }} {{ condition.comparison_value | currency: 'USD':'symbol':'1.2-2' }}</p>
-                              <p class="success-condition-criteria__text" *ngIf="condition.comparison_property === numericConditionEnum.EMPLOYEES || condition.comparison_property === numericConditionEnum.PRODUCTS_COMPLETED || condition.comparison_property === numericConditionEnum.BRAND_REPUTATION || condition.comparison_property === numericConditionEnum.ORDERS_FULFILLED" class="success-condition-label">{{ condition.comparison_property }} {{ condition.comparison_type }} {{ condition.comparison_value }}</p>
-                              <p  *ngIf="condition.comparison_property === numericConditionEnum.REVENUE || condition.comparison_property === numericConditionEnum.CASH"
-                                  class="success-condition-label">
-                                  Currently =
-                                  {{ condition.conditionGetCurrentValue() | currency: 'USD':'symbol':'1.2-2' }}
-                              </p>
-                              <p *ngIf="condition.comparison_property === numericConditionEnum.EMPLOYEES || condition.comparison_property === numericConditionEnum.PRODUCTS_COMPLETED || condition.comparison_property === numericConditionEnum.BRAND_REPUTATION || condition.comparison_property === numericConditionEnum.ORDERS_FULFILLED"
-                                  class="success-condition-label">
-                                  Currently =
-                                  {{ condition.conditionGetCurrentValue() }}
-                              </p>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-          <hr *ngIf="!isLast"/>
-      </div>
+<hr>
+<!-- Images -->
+<section class="partners-images">
+  <div *ngFor="let partnerImage of selectedPartners">
+    <img [src]="partnerImage" alt="partners_images">
   </div>
-</ion-content> -->
+</section>
+
+<!-- Robotics Card -->
+
+<div class="robotics-card">
+  <div class="robotics-card-content">
+    <p class="robotics-card-text">
+      Take a look at our complete <br><strong>Robotics partner offerings</strong>
+    </p>
+    <button class="btn robotics-card-button">Download catalogue</button>
+  </div>
+</div>
+
+<!-- Quotes -->
+
+<section class="quotes-card">
+  <h2>Continuously helping leading companies <br>improve their business success</h2>
+  <!-- Carousel -->
+  <div id="carouselQuotes" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselQuotes" data-bs-slide-to="0" class="active indicator" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselQuotes" data-bs-slide-to="1" aria-label="Slide 2" class="indicator"></button>
+      <button type="button" data-bs-target="#carouselQuotes" data-bs-slide-to="2" aria-label="Slide 3" class="indicator"></button>
+      <button type="button" data-bs-target="#carouselQuotes" data-bs-slide-to="3" aria-label="Slide 4" class="indicator"></button>
+    </div>
+    <div class="carousel-inner">
+      <div *ngFor="let quoteEntry of quoteEntries; let i = index" class="carousel-item" [class.active]="i === 0">
+        <div class="quote-container">
+          <div class="quote-content">
+            <i class="fas fa-quote-left fa-5x"></i>
+            <p class="quote-text">{{quoteEntry[1]}}</p>
+          </div>
+          <hr>
+          <div class="quote-source">{{ quoteEntry[0]}}</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Button to top -->
+<button *ngIf="showScrollButton" (click)="scrollToTop()" class="scroll-to-top">
+  ↑
+</button>
+
