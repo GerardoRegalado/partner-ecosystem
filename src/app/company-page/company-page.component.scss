@@ -91,39 +91,39 @@ hr {
 /* Robotics Card */
 
 .robotics-card {
-  background-color: $secondary-blue-108-8; /* Azul oscuro, ajusta según el color exacto */
+  background-color: $secondary-blue-108-8;
   color: $tertiary-white;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 1.5rem;
-  border-radius: 2vw; // Ajusta según la curvatura de la tarjeta en la imagen
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Añade sombra para dar profundidad
+  border-radius: 2vw;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin: 5vw 10vw;
   height: 35vh;
 
   .robotics-card-content {
     display: flex;
     align-items: center;
-    gap: 15vw; // Espacio entre el texto y el botón
+    gap: 15vw;
   }
 
   .robotics-card-text {
-    font-size: 2rem; // Ajusta según el tamaño del texto en la imagen
+    font-size: 2rem;
   }
 
   .robotics-card-button {
     background-color: $secondary-yellow;
-    color: $tertiary-white; // Color del texto del botón, ajusta según el color exacto
+    color: $tertiary-white;
     border: none;
     padding: 1.8rem;
-    border-radius: 20px; // Ajusta según la curvatura del botón en la imagen
+    border-radius: 20px;
     cursor: pointer;
     font-weight: bold;
 
 
     &:hover {
-      background-color: darken($secondary-yellow, 10%); // Oscurece el botón al pasar el mouse
+      background-color: darken($secondary-yellow, 10%);
     }
   }
 }
@@ -151,18 +151,20 @@ hr {
 
 .quote-container {
   padding: 2vw;
-  border: 1px solid $tertiary-gray-48-8; // Cambia el color según sea necesario
+  border: 1px solid $tertiary-gray-48-8;
   border-radius: 1vw;
-  box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.3); // Ajusta la sombra según tus preferencias
-  background-color: $tertiary-gray-7-8; // O el color de fondo deseado
-  max-width: 60vw; // O el ancho que prefieras
+  box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.3);
+  background-color: $tertiary-gray-7-8;
+  max-width: 60vw;
   margin: 2vw;
 
   .quote-content {
     display: flex;
-    align-items: center; // Alinea verticalmente el texto y el icono
+    align-items: center;
+    // Alinea verticalmente el texto y el icono
     text-align: left;
-    gap: 5vw; // Espacio entre el icono y el texto
+    gap: 5vw;
+    // Espacio entre el icono y el texto
     margin: 3vw;
 
     i {
@@ -174,23 +176,23 @@ hr {
 
   .quote-text {
     font-style: italic;
-    color: $primary-gray; // Cambia el color de texto según sea necesario
-    margin: 0; // Ajusta el margen según sea necesario
-    font-size:1rem; // Ajusta el tamaño de la fuente según sea necesario
+    color: $primary-gray;
+    margin: 0;
+    font-size:1rem;
   }
 
   hr {
     border: none;
     height: 2px;
-    background-color: $primary-gray; // Color de la línea
-    margin: 0; // Espacio vertical antes y después de la línea
+    background-color: $primary-gray;
+    margin: 0;
   }
 
   .quote-source {
     text-align: center;
     font-weight: bold;
-    color: $primary-gray; // Cambia el color según sea necesario
-    font-size: 1rem; // Ajusta el tamaño de la fuente según sea necesario
+    color: $primary-gray;
+    font-size: 1rem;
     margin: 2vw;
   }
 }
@@ -198,16 +200,16 @@ hr {
 /* Button to top */
 
 .scroll-to-top {
-  position: fixed; // Fija el botón sobre el contenido
-   bottom: 20px; // 20px desde la parte inferior
-  right: 20px; // 20px desde la derecha
+  position: fixed;
+   bottom: 20px;
+  right: 20px;
   padding: 1vw 1vw;
   color: $primary-gray;
   background-color: $tertiary-gray-7-8;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  z-index: 999; // Asegúrate de que esté sobre otros elementos
+  z-index: 999;
 
 
    &:hover {

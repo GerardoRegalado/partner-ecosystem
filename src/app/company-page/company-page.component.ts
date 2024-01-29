@@ -48,17 +48,22 @@ export class CompanyPageComponent implements AfterViewInit, OnInit {
 
     public selectedPartners: string[] = this.images['metrology']; //* Created to host the partner selected to show the images
     public quoteEntries: [string,string][] = []; //* Property used to get the quotes object keys;
+    public showScrollButton = false //* flag for the button to travel to the top.
+
     constructor(@Inject(PLATFORM_ID) private platformID: Object){}
-    public showScrollButton = false
-/* The `@HostListener('window:scroll', [])` decorator is used to listen for the scroll event on the
-window. When the scroll event is triggered, the `onWindowScroll()` method is called. */
 
 
-
+ /**
+  * Initializes the quoteEntries array by converting the quotes object into an
+  * array of key-value pairs.
+  */
   public ngOnInit(): void {
     this.quoteEntries = Object.entries(this.quotes)
   }
 
+  /**
+   * Checks if the platform is a browser and then initializes a carousel.
+   */
   public ngAfterViewInit(): void {
     if(isPlatformBrowser(this.platformID)){
       this.initializeCarousel();

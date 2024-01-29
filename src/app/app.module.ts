@@ -18,9 +18,6 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
         RouterModule.forRoot([
             { path: '', component: CompanyPageComponent },
             { path: 'company', component: CompanyPageComponent },
-            {path: '**', component: PageNotFoundComponent}
-
-            //{path: '', redirectTo: '/company', pathMatch: 'full'},
         ]),
     ],
     providers: [provideClientHydration()],
