@@ -214,3 +214,86 @@ hr {
      background-color: $tertiary-gray-104-7;
    }
 }
+
+/* Media queries */
+
+@media (max-width: 768px) {
+  .company {
+    margin: 15vw 3rem;
+    h2{
+      font-size: 1rem;
+
+    }
+    p {
+      font-size: 0.8rem;
+    }
+  }
+
+  .tabs {
+    margin-top: 5vh;
+
+    .category-selection__button {
+      font-size: 0.7rem;
+      margin-bottom: 5vw;
+    }
+  }
+
+  hr{
+    height: 0.2vh;
+
+  }
+
+  .robotics-card {
+    border-radius: 10vw;
+  }
+  .robotics-card-content {
+    flex-direction: column;
+    gap: 1vh;
+    .robotics-card-text {
+      font-size: 1rem;
+    }
+
+    .robotics-card-button {
+      padding: 1rem;
+    }
+  }
+
+  .quotes-card {
+    h2{
+      font-size: 1rem;
+    }
+
+  }
+
+  .indicator {
+    margin-bottom: 2vw;
+  }
+
+  .quote-container {
+    padding: 5vw;
+    max-width: 90vw;
+
+    .quote-content {
+      gap: 20vw;
+
+      i {
+        color: $primary-blue;
+        max-width: 4vw;
+        margin-left: 1vw;
+      }
+    }
+
+    .quote-text {
+      font-size: 0.8rem;
+    }
+
+    hr {
+      border: none;
+      height: 2px;
+      background-color: $primary-gray;
+      margin: 1vw 0;
+    }
+
+  }
+
+}
